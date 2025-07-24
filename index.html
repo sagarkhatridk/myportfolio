@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sagar Khatri | Full-Stack Software Engineer</title>
   <script src="https://kit.fontawesome.com/886e387064.js" crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
 
   <style>
     body {
@@ -18,11 +18,12 @@
 
     .about-text {
       max-width: 900px;
-      margin: 60px auto;
+      margin: 40px auto;
       text-align: center;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       line-height: 1.8;
       color: #2c3e50;
+      padding: 0 15px;
     }
 
     .profile-img {
@@ -41,6 +42,7 @@
       margin-top: 50px;
       text-align: center;
       color: #6c757d;
+      padding: 20px;
     }
 
     .card {
@@ -55,74 +57,11 @@
     h6 {
       font-family: 'Merriweather', Georgia, serif;
     }
-  </style>
-</head>
 
-<body>
-
-  <div class="container text-center mt-5">
-    <!-- <img src="https://avatars.githubusercontent.com/u/99117896?v=4" alt="Sagar Khatri" class="profile-img mb-3"> -->
-    <h1 class="fw-bold">Sagar Khatri</h1>
-    <h4 class="text-muted">Software Developer at Swan Softweb Solutions</h4>
-  </div>
-
-  <div class="about-text">
-    Full-Stack Software Developer skilled in Django, DRF, React.js, and Bootstrap. Experienced with scalable APIs, HTMX,
-    AWS, Docker, CI/CD, and web scraping. Passionate about clean code, teamwork, and learning.
-  </div>
-
-
-  <div class="container section">
-    <h2 class="fw-bold text-center mb-4">Work Experience</h2>
-    <div class="timeline-container d-flex justify-content-center">
-      <div class="timeline">
-        <div class="timeline-item d-flex">
-          <div class="timeline-left text-end pe-2 text-nowrap">
-            <div class="fw-bold" style="font-size: 1.00rem;">Swan Softweb Solutions</div>
-            <div class="text-muted" style="font-size: 1.00rem;">Software Developer</div>
-            <div class="text-muted" style="font-size: 0.95rem;">Sep 2023 - Present</div>
-          </div>
-          <div class="timeline-line position-relative mx-3">
-            <div class="timeline-dot position-absolute top-0 start-50 translate-middle"></div>
-            <div class="timeline-vertical"></div>
-          </div>
-          <div class="timeline-right ps-4">
-            <div>Developed scalable web applications and APIs using Django and Django REST Framework (DRF).</div>
-            <div>Collaborated with frontend teams to integrate React.js and Bootstrap for modern UI/UX.</div>
-            <div>Implemented CI/CD pipelines and Dockerized environments for efficient deployments.</div>
-            <div>Worked on AWS cloud services for hosting and automation.</div>
-            <div class="fw-semibold mt-2">Technologies used:</div>
-            <div>Django, DRF, React.js, Bootstrap, AWS, Docker, CI/CD</div>
-          </div>
-        </div>
-        <div class="timeline-item d-flex mt-5">
-          <div class="timeline-left text-end pe-2 text-nowrap"
-            style="display: flex; flex-direction: column; align-items: flex-end;">
-            <div class="fw-bold" style="font-size: 1.00rem; min-width: 220px; text-align: right;">X-Byte Enterprise
-              Solutions</div>
-            <div class="text-muted" style="font-size: 1.00rem; min-width: 220px; text-align: right;">Python Developer
-            </div>
-            <div class="text-muted" style="font-size: 0.95rem; min-width: 220px; text-align: right;">Jun 2022 - Jun 2023
-            </div>
-          </div>
-          <div class="timeline-line position-relative mx-3">
-            <div class="timeline-dot position-absolute top-0 start-50 translate-middle"></div>
-            <div class="timeline-vertical"></div>
-          </div>
-          <div class="timeline-right ps-4">
-            <div>Built and maintained Python-based data pipelines and web scrapers.</div>
-            <div>Optimized backend performance and database queries (MySQL, PostgreSQL).</div>
-            <div>Documented processes and supported troubleshooting for ongoing projects.</div>
-            <div class="fw-semibold mt-2">Technologies used:</div>
-            <div>Python, MySQL, PostgreSQL, Web Scraping</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <style>
     .timeline-container {
       margin-top: 40px;
+      display: flex;
+      justify-content: center;
     }
 
     .timeline {
@@ -131,21 +70,43 @@
     }
 
     .timeline-item {
+      display: flex;
       align-items: flex-start;
       position: relative;
-      min-height: 160px;
-      /* Force height to give room for the glowing line */
+      margin-bottom: 40px;
     }
-
 
     .timeline-left {
-      min-width: 220px;
-      max-width: 220px;
+      width: 100%;
+      text-align: right;
+      padding-right: 10px;
     }
+
+    @media (max-width: 768px) {
+      .timeline-left {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        padding-bottom: 10px;
+      }
+
+      .timeline-right {
+        padding-left: 0;
+      }
+
+      .timeline-item {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .timeline-line {
+        display: none;
+      }
+    }
+
 
     .timeline-line {
       width: 40px;
-      min-width: 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -156,7 +117,6 @@
       position: absolute;
       top: 8px;
       bottom: 0;
-      /* NEW */
       left: 50%;
       width: 4px;
       background: linear-gradient(to bottom, #0d6efd, #0dcaf0);
@@ -164,32 +124,13 @@
       z-index: 1;
       box-shadow: 0 0 10px #0d6efd, 0 0 20px #0dcaf0, 0 0 30px #0d6efd;
     }
-
-
-    .timeline-vertical {
-      position: absolute;
-      top: 8px;
-      bottom: 0;
-      /* NEW */
-      left: 50%;
-      width: 4px;
-      background: linear-gradient(to bottom, #0d6efd, #0dcaf0);
-      transform: translateX(-50%);
-      z-index: 1;
-      box-shadow: 0 0 10px #0d6efd, 0 0 20px #0dcaf0, 0 0 30px #0d6efd;
-    }
-
-
 
     .timeline-right {
       flex: 1;
+      padding-left: 10px;
     }
 
     @media (max-width: 768px) {
-      .timeline {
-        flex-direction: column;
-      }
-
       .timeline-item {
         flex-direction: column;
         align-items: stretch;
@@ -198,21 +139,29 @@
       .timeline-left,
       .timeline-right {
         max-width: 100%;
-        min-width: 0;
         text-align: left;
         padding: 0;
       }
 
+      .timeline-left {
+        margin-bottom: 10px;
+      }
+
       .timeline-line {
-        min-width: 20px;
         width: 20px;
+        height: 40px;
+        margin: 0 auto;
+      }
+
+
+      .timeline-vertical {
+        display: none;
       }
     }
 
     .floating-panel {
       position: fixed;
-      bottom: 30px;
-      margin-top: 200px;
+      bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
       background-color: #f8f9fa;
@@ -220,25 +169,85 @@
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       padding: 10px 20px;
       z-index: 9999;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
     }
 
     .floating-panel a {
       color: #2c3e50;
       font-size: 1.5rem;
-      margin: 0 12px;
       text-decoration: none;
       transition: color 0.2s ease;
     }
 
     .floating-panel a:hover {
       color: #0d6efd;
-      /* Bootstrap primary */
     }
   </style>
+</head>
 
+<body>
+
+  <div class="container text-center mt-5">
+    <h1 class="fw-bold">Sagar Khatri</h1>
+    <h4 class="text-muted">Software Developer at Swan Softweb Solutions</h4>
+  </div>
+
+  <div class="about-text">
+    Full-Stack Software Developer skilled in Django, DRF, React.js, and Bootstrap. Experienced with scalable APIs, HTMX,
+    AWS, Docker, CI/CD, and web scraping. Passionate about clean code, teamwork, and learning.
+  </div>
+
+  <div class="container section">
+    <h2 class="fw-bold text-center mb-4">Work Experience</h2>
+    <div class="timeline-container">
+      <div class="timeline">
+        <!-- Job 1 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <div class="fw-bold">Swan Softweb Solutions</div>
+            <div class="text-muted">Software Developer</div>
+            <div class="text-muted">Sep 2023 - Present</div>
+          </div>
+          <div class="timeline-line">
+            <div class="timeline-vertical"></div>
+          </div>
+          <div class="timeline-right">
+            <div>Developed scalable web applications and APIs using Django and Django REST Framework (DRF).</div>
+            <div>Collaborated with frontend teams to integrate React.js and Bootstrap for modern UI/UX.</div>
+            <div>Implemented CI/CD pipelines and Dockerized environments for efficient deployments.</div>
+            <div>Worked on AWS cloud services for hosting and automation.</div>
+            <div class="fw-semibold mt-2">Technologies used:</div>
+            <div>Django, DRF, React.js, Bootstrap, AWS, Docker, CI/CD</div>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <div class="fw-bold">X-Byte Enterprise Solutions</div>
+            <div class="text-muted">Python Developer</div>
+            <div class="text-muted">Jun 2022 - Jun 2023</div>
+          </div>
+          <div class="timeline-line">
+            <div class="timeline-vertical"></div>
+          </div>
+          <div class="timeline-right">
+            <div>Built and maintained Python-based data pipelines and web scrapers.</div>
+            <div>Optimized backend performance and database queries (MySQL, PostgreSQL).</div>
+            <div>Documented processes and supported troubleshooting for ongoing projects.</div>
+            <div class="fw-semibold mt-2">Technologies used:</div>
+            <div>Python, MySQL, PostgreSQL, Web Scraping</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Floating Social Icons Panel -->
-  <div class="floating-panel d-flex align-items-center justify-content-center">
+  <div class="floating-panel">
     <a href="https://github.com/sagarkhatridk" target="_blank"><i class="fab fa-github"></i></a>
     <a href="https://twitter.com/igsagar_" target="_blank"><i class="fab fa-twitter"></i></a>
     <a href="mailto:sagarkhatridk@gmail.com"><i class="fas fa-envelope"></i></a>
