@@ -26,14 +26,6 @@
       padding: 0 15px;
     }
 
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #0d6efd;
-    }
-
     .section {
       margin-top: 50px;
     }
@@ -67,6 +59,7 @@
     .timeline {
       width: 100%;
       max-width: 1000px;
+      padding: 0 15px;
     }
 
     .timeline-item {
@@ -74,42 +67,17 @@
       align-items: flex-start;
       position: relative;
       margin-bottom: 40px;
+      gap: 20px;
     }
 
     .timeline-left {
-      width: 100%;
+      width: 30%;
       text-align: right;
       padding-right: 10px;
     }
 
-    @media (max-width: 768px) {
-      .timeline-left {
-        width: 100%;
-        text-align: left;
-        padding-right: 0;
-        padding-bottom: 10px;
-      }
-
-      .timeline-right {
-        padding-left: 0;
-      }
-
-      .timeline-item {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .timeline-line {
-        display: none;
-      }
-    }
-
-
     .timeline-line {
-      width: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      width: 20px;
       position: relative;
     }
 
@@ -128,35 +96,7 @@
     .timeline-right {
       flex: 1;
       padding-left: 10px;
-    }
-
-    @media (max-width: 768px) {
-      .timeline-item {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .timeline-left,
-      .timeline-right {
-        max-width: 100%;
-        text-align: left;
-        padding: 0;
-      }
-
-      .timeline-left {
-        margin-bottom: 10px;
-      }
-
-      .timeline-line {
-        width: 20px;
-        height: 40px;
-        margin: 0 auto;
-      }
-
-
-      .timeline-vertical {
-        display: none;
-      }
+      line-height: 1.6;
     }
 
     .floating-panel {
@@ -184,6 +124,33 @@
 
     .floating-panel a:hover {
       color: #0d6efd;
+    }
+
+    /* Responsive Fix */
+    @media (max-width: 768px) {
+      .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .timeline-left,
+      .timeline-right {
+        width: 100%;
+        text-align: left;
+        padding: 0;
+      }
+
+      .timeline-line {
+        display: none;
+      }
+
+      .timeline {
+        padding: 0 10px;
+      }
+
+      .timeline-right {
+        padding-top: 10px;
+      }
     }
   </style>
 </head>
